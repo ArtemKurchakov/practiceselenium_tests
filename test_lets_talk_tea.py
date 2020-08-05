@@ -21,3 +21,7 @@ class TestLetsTalkTea(unittest.TestCase):
         message.send_keys('HELLO')
         submit = self.driver.find_element_by_xpath('//input[@class="form-submit"]')
         submit.click()
+        
+        
+    def tearDown(self):
+        self.driver.close()
